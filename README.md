@@ -8,11 +8,39 @@
 include("CaboCha.jl")
 
 sentence = "クロールで泳いでいる少女を見た"
-xml = cabocha_parser(sentence)
-
-println(xml)
+println(cabocha_parser(sentence, "f0"))
+println(cabocha_parser(sentence, "f1"))
+println(cabocha_parser(sentence, "f3"))
 ```
 
+`option="f0"`
+```
+クロールで-D    
+  泳いでいる-D  
+        少女を-D
+            見た
+EOS
+```
+
+`option="f1"`
+```
+* 0 1D 0/1 1.171920
+クロール	名詞,一般,*,*,*,*,クロール,クロール,クロール
+で	助詞,格助詞,一般,*,*,*,で,デ,デ
+* 1 2D 0/2 1.603103
+泳い	動詞,自立,*,*,五段・ガ行,連用タ接続,泳ぐ,オヨイ,オヨイ
+で	助詞,接続助詞,*,*,*,*,で,デ,デ
+いる	動詞,非自立,*,*,一段,基本形,いる,イル,イル
+* 2 3D 0/1 1.603103
+少女	名詞,一般,*,*,*,*,少女,ショウジョ,ショージョ
+を	助詞,格助詞,一般,*,*,*,を,ヲ,ヲ
+* 3 -1D 0/1 0.000000
+見	動詞,自立,*,*,一段,連用形,見る,ミ,ミ
+た	助動詞,*,*,*,特殊・タ,基本形,た,タ,タ
+EOS
+```
+
+`option="f3"`
 ```xml
 ?xml version="1.0" encoding="utf-8"?>
 <sentence>
@@ -34,5 +62,4 @@ println(xml)
   <tok id="8" feature="助動詞,*,*,*,特殊・タ,基本形,た,タ,タ">た</tok>
  </chunk>
 </sentence>
-
 ```
