@@ -11,7 +11,6 @@ usage:
 
 """ cabocha_parser """
 function cabocha_parser(sentence; option = "f3")
-  option == "f3" && return parse_string(readall(pipeline(`echo $sentence`, `cabocha -f3`)))
-  option != "f3" && return readall(pipeline(`echo $sentence`, `cabocha -$option`))
+  return readall(pipeline(`echo $sentence`, `cabocha -$option`))
 end
 
