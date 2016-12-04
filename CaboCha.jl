@@ -10,8 +10,8 @@ usage:
 """
 
 """ cabocha_parser """
-function cabocha_parser(sentence; xml = true)
-  xml == true && return parse_string(readall(pipeline(`echo $sentence`, `cabocha -f3`)))
-  xml != true && return readall(pipeline(`echo $sentence`, `cabocha -f1`))
+function cabocha_parser(sentence; option = "f3")
+  option == "f3" && return parse_string(readall(pipeline(`echo $sentence`, `cabocha -f3`)))
+  option != "f3" && return readall(pipeline(`echo $sentence`, `cabocha -$option`))
 end
 
