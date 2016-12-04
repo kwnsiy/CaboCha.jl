@@ -10,7 +10,7 @@ usage:
 """
 
 """ cabocha_parser """
-function cabocha_parser(sentence; option = "f3")
+function cabocha_parser(sentence; option = "f1")
   return readall(pipeline(`echo $sentence`, `cabocha -$option`))
 end
 
