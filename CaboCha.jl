@@ -6,7 +6,6 @@ doc =
 """
 usage: 
   cabocha_parser("クロールで泳いでいる少女を見た")
-  This function takes a LightXML.XMLDocument as a return value.
 """
 
 """ cabocha_parser """
