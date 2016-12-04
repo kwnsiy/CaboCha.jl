@@ -2,12 +2,12 @@
 
 using XMLconvert
 
-doc=
+doc = 
 """
 usage: 
   cabocha_parser("クロールで泳いでいる少女を見た")
   This function takes a dictionary as a return value.
-""
+"""
 
 """ cabocha_parser """
 function cabocha_parser(sentence)
