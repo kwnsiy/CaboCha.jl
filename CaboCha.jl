@@ -24,15 +24,15 @@ function cabocha_parser(sentence)
      push!(d[:chunk], "")  
      push!(d[:link], parse(tmp[3][1:end-1])+1)
      head, func = map(parse, split(tmp[4], "/"))
-     push!(d[:head], head)
-     push!(d[:func], func)
+     push!(d[:head], head+1)
+     push!(d[:func], func+1)
      push!(d[:tok_surface], Array{UTF8String,1}())
      push!(d[:tok_feature], Array{UTF8String,1}())
     else
      surface, feature = split(line, "\t")
      d[:chunk][end] = d[:chunk][end]*surface
-      push!(d[:tok_surface][end], surface+1)
-      push!(d[:tok_feature][end], feature+1)
+      push!(d[:tok_surface][end], surface)
+      push!(d[:tok_feature][end], feature)
     end
   end
   return d
