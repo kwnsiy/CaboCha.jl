@@ -1,5 +1,6 @@
 # CaboCha.jl
-係り受け解析
+係り受け解析<br>
+UTF8 only
 
 ## usage
 `example.jl`
