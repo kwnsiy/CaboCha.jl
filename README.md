@@ -1,6 +1,6 @@
 # CaboCha.jl
 係り受け解析<br>
-UTF8 only
+UTF8環境only
 
 ## usage
 `example.jl`
