@@ -31,8 +31,8 @@ function cabocha_parser(sentence)
     else
      surface, feature = split(line, "\t")
      d[:chunk][end] = d[:chunk][end]*surface
-     push!(d[:tok_surface][end], surface)
-     push!(d[:tok_feature][end], feature)
+      push!(d[:tok_surface][end], surface+1)
+      push!(d[:tok_feature][end], feature+1)
     end
   end
   return d
