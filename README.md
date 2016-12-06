@@ -8,6 +8,7 @@
 include("CaboCha.jl")
 
 sentence = "クロールで泳いでいる少女を見た"
+
 # 解析結果、Dict型、添え字は1から
 @show cabocha_parser(sentence)
 
