@@ -8,11 +8,30 @@
 include("CaboCha.jl")
 
 sentence = "クロールで泳いでいる少女を見た"
-println(cabocha_parser(sentence, option = "f0"))
-println(cabocha_parser(sentence, option = "f1")) # default
-println(cabocha_parser(sentence, option = "f3"))
+# 解析結果、Dict型、添え字は1から
+@show cabocha_parser(sentence)
+
+# 標準出力のみ(第二引数指定) #
+println(cabocha_parser(sentence, "f0"))
+println(cabocha_parser(sentence, "f1")) # default
+println(cabocha_parser(sentence, "f3"))
+
+```
+## 解析結果
+`sentence="クロールで泳いでいる少女を見た"`
+```
+a = Dict{Symbol,Any}(:chunk=>UTF8String["クロールで","泳いでいる","少女を","見た"],:chunk_id=>[1,2,3,4],:tok_feature=>[UTF8String["名詞,一般,*,*,*,*,クロール,クロール,クロール","助詞,格助詞,一般,*,*,*,で,デ,デ"],UTF8String["動詞,自立,*,*,五段・ガ行,連用タ接続,泳ぐ,オヨイ,オヨイ","助詞,接続助詞,*,*,*,*,で,デ,デ","動詞,非自立,*,*,一段,基本形,いる,イル,イル"],UTF8String["名詞,一般,*,*,*,*,少女,ショウジョ,ショージョ","助詞,格助詞,一般,*,*,*,を,ヲ,ヲ"],UTF8String["動詞,自立,*,*,一段,連用形,見る,ミ,ミ","助動詞,*,*,*,特殊・タ,基本形,た,タ,タ"]],:tok_surface=>[UTF8String["クロール","で"],UTF8String["泳い","で","いる"],UTF8String["少女","を"],UTF8String["見","た"]],:link=>[2,3,4,0],:head=>[0,0,0,0],:func=>[1,2,1,1])
+Dict{Symbol,Any} with 7 entries:
+  :chunk       => UTF8String["クロールで","泳いでいる","少女を","見た"]
+  :chunk_id    => [1,2,3,4]
+  :tok_feature => [UTF8String["名詞,一般,*,*,*,*,クロール,クロール,クロール","助詞,格助詞,一般,*,*,*,で,デ,デ"],UTF8…
+  :tok_surface => [UTF8String["クロール","で"],UTF8String["泳い","で","いる"],UTF8String["少女","を"],UTF8String["見…
+  :link        => [2,3,4,0]
+  :head        => [0,0,0,0]
+  :func        => [1,2,1,1]
 ```
 
+## 標準出力（第二引数指定）
 `option="f0"`
 ```
 クロールで-D    
