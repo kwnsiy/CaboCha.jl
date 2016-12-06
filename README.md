@@ -14,7 +14,7 @@ sentence = "クロールで泳いでいる少女を見た"
 
 # 標準出力のみ(第二引数指定) #
 println(cabocha_parser(sentence, "f0"))
-println(cabocha_parser(sentence, "f1")) # default
+println(cabocha_parser(sentence, "f1"))
 println(cabocha_parser(sentence, "f3"))
 
 ```
