@@ -1,7 +1,7 @@
 # CaboCha.jl
 係り受け解析<br>
 UTF8環境only<br>
-Require : CaoboCha
+Require : CaoboCha<br>
 https://taku910.github.io/cabocha/
 
 ## Usage
