@@ -1,10 +1,10 @@
 # CaboCha.jl
 係り受け解析<br>
 UTF8環境only<br>
-require : CaoboCha
+Require : CaoboCha
 https://taku910.github.io/cabocha/
 
-## usage
+## Usage
 `example.jl`
 
 ```julia
