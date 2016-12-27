@@ -1,6 +1,6 @@
 # CaboCha.jl
 係り受け解析<br>
-UTF8環境only
+UTF8環境only<br>
 https://taku910.github.io/cabocha/
 
 ## usage
