@@ -1,6 +1,7 @@
 # CaboCha.jl
 係り受け解析<br>
 UTF8環境only
+https://taku910.github.io/cabocha/
 
 ## usage
 `example.jl`
